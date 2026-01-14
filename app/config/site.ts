@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Tom Børvan | Digital Commerce Consultant & Project Manager",
   description:
     "Project Manager at Alpha Solutions Norge, one of Scandinavia's top digital commerce consultancies. 15+ years in tech, e-commerce consulting, and leading international teams. Based in Oslo, Norway.",
-  url: "https://tomborvan.vercel.app",
+  url: "https://www.tomborvan.com",
   image: "/tom-borvan.jpg",
   email: "tborvan@gmail.com",
   location: {
