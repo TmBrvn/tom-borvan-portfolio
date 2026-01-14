@@ -10,6 +10,14 @@
   --gray-light: #94a3b8;
 }
 
+/* Light mode overrides */
+html[data-theme="light"] {
+  --darker: #ffffff;
+  --dark: #f1f5f9;
+  --light: #0f172a;
+  --gray-light: #475569;
+}
+
 @theme inline {
   --color-primary: var(--primary);
   --color-accent: var(--accent);
@@ -48,6 +56,15 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+/* Light mode scrollbar */
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
 }
 
 /* Gradient text utility */
