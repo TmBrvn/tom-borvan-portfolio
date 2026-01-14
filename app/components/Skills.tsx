@@ -144,7 +144,7 @@ export default function Skills() {
             {[
               { lang: "Norwegian", level: "Native", width: "100%" },
               { lang: "English", level: "Fluent", width: "95%" },
-              { lang: "Swedish", level: "Basic", width: "40%" },
+              { lang: "Swedish", level: "Conversational", width: "70%" },
             ].map((item) => (
               <div key={item.lang} className="text-center">
                 <p className="text-light font-medium">{item.lang}</p>
