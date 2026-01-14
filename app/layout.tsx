@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "./config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,21 +14,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tom Børvan | E-Commerce Consultant & Project Lead",
-  description: "Project Manager at Alpha Solutions Norge. 15+ years in tech, e-commerce consulting, and leading international teams. Based in Oslo, Norway.",
-  keywords: ["Tom Børvan", "E-commerce", "Project Manager", "Consultant", "Shopify", "Oslo", "Norway", "Alpha Solutions"],
-  authors: [{ name: "Tom Børvan" }],
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s | Tom Børvan",
+  },
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Tom Børvan | E-Commerce Consultant & Project Lead",
-    description: "Project Manager at Alpha Solutions Norge. 15+ years in tech, e-commerce consulting, and leading international teams.",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: `${siteConfig.name} Portfolio`,
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tom Børvan | E-Commerce Consultant & Project Lead",
-    description: "Project Manager at Alpha Solutions Norge. 15+ years in tech, e-commerce consulting, and leading international teams.",
-    creator: "@TomBorvan",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: siteConfig.social.twitter,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
