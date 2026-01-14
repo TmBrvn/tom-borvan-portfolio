@@ -45,8 +45,12 @@ const projects = [
     title: "madeinnorway.no",
     company: "Personal Venture",
     description:
-      "Running a webstore showcasing Norwegian products together with my wife. From concept to launch to ongoing operations.",
-    tags: ["E-Commerce", "Entrepreneurship"],
+      "Running an online store showcasing Norwegian arts and handicrafts together with my wife since 2013. Domain owned since 1999. Featured in Kampanje for overlap with Innovation Norway's national 'Made in Norway' initiative.",
+    metrics: [
+      { label: "Years Active", value: "11+" },
+      { label: "Since", value: "2013" },
+    ],
+    tags: ["E-Commerce", "Entrepreneurship", "Norwegian Crafts"],
     link: "https://madeinnorway.no",
   },
 ];

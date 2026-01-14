@@ -40,7 +40,8 @@ const timelineData = [
     year: "2012",
     title: "University of North Dakota",
     role: "BBA Entrepreneurship",
-    description: "Graduated Magna Cum Laude with Minor in Information Systems. Larson Scholarship recipient.",
+    description: "Graduated Magna Cum Laude with Minor in Information Systems. Multiple-time Dean's List and Larson Scholarship recipient. Won 1st place at Giants Entrepreneurship Challenge for myQuub—airport sleeping pods concept competing against 20+ teams from 9 universities. Delta Tau Delta member.",
+    metrics: ["Magna Cum Laude", "Dean's List", "1st Place Giants Challenge"],
     highlight: true,
   },
   {

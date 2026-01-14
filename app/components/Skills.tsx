@@ -21,28 +21,40 @@ const skillCategories = [
     color: "accent",
     skills: [
       "Adobe Commerce (Magento)",
+      "Shopify",
       "Next.js / React",
-      "Vercel deployment",
-      "Headless architecture",
-      "API integrations",
+      "Headless CMS (Hygraph)",
+      "PIM (Akeneo)",
     ],
   },
   {
-    title: "AI & Analytics",
-    icon: "🤖",
+    title: "Marketing & Analytics",
+    icon: "📊",
     color: "primary",
+    skills: [
+      "Klaviyo (Email)",
+      "VWO (A/B Testing)",
+      "Google Analytics",
+      "Vercel Analytics",
+      "Conversion optimization",
+    ],
+  },
+  {
+    title: "AI & Automation",
+    icon: "🤖",
+    color: "accent",
     skills: [
       "Claude Code",
       "Microsoft Copilot Studio",
       "Power BI",
-      "Data visualization",
       "Process automation",
+      "AI-assisted development",
     ],
   },
   {
     title: "Technical Foundation",
     icon: "⚙️",
-    color: "accent",
+    color: "primary",
     skills: [
       "CCNA Certified",
       "Network security",
@@ -87,7 +99,7 @@ export default function Skills() {
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-5 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
