@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Production URL:** https://www.tomborvan.com
+
 ## Commands
 
 ```bash
@@ -33,3 +35,12 @@ Uses Tailwind CSS 4 with custom CSS variables defined in `app/globals.css`:
 - `--primary`, `--accent` for brand colors
 - `--dark`, `--light`, `--gray` for neutrals
 - Custom utilities: `.gradient-text`, `.geo-pattern`, `.section-divider`
+
+### Theming
+
+Dark/light mode support with system preference detection:
+- `app/components/ThemeProvider.tsx` - React Context for theme state
+- `app/components/ThemeToggle.tsx` - Floating toggle button (bottom-right)
+- Theme controlled via `data-theme` attribute on `<html>` element
+- CSS variables switch automatically based on theme
+- Inline script in layout.tsx prevents FOUC (Flash of Unstyled Content)
