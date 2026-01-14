@@ -29,11 +29,17 @@ const projects = [
     featured: true,
   },
   {
-    title: "Digital Commerce Delivery",
+    title: "Møbelringen E-commerce Platform",
     company: "Alpha Solutions Norge",
     description:
-      "Delivering complete digital commerce solutions at one of Scandinavia's leading consultancies. From platform strategy to go-live, working across Adobe Commerce, headless architectures, and modern tech stacks.",
-    tags: ["Adobe Commerce", "Next.js", "Vercel", "Claude Code"],
+      "Delivered a complete omnichannel e-commerce platform for Norway's leading furniture chain with 70 stores. Built on headless architecture with Adobe Commerce, enabling seamless integration between digital and physical retail.",
+    metrics: [
+      { label: "Stores", value: "70" },
+      { label: "Launch", value: "2024" },
+    ],
+    tags: ["Adobe Commerce", "Next.js", "Vercel", "Headless", "Omnichannel"],
+    featured: true,
+    link: "https://www.mobelringen.no",
   },
   {
     title: "madeinnorway.no",
