@@ -70,22 +70,22 @@ export default function Timeline() {
         </motion.div>
 
         <div className="relative">
-          {/* Center line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-accent to-primary/20" />
+          {/* Center line - left on mobile, center on md+ */}
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-accent to-primary/20" />
 
           {timelineData.map((item, index) => (
             <motion.div
               key={`${item.year}-${item.title}`}
-              className={`relative flex items-center mb-12 ${
+              className={`relative flex items-center mb-12 justify-start md:${
                 index % 2 === 0 ? "justify-start" : "justify-end"
               }`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              {/* Timeline dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+              {/* Timeline dot - left on mobile, center on md+ */}
+              <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 z-10">
                 <div
                   className={`w-4 h-4 rounded-full border-2 ${
                     item.highlight
@@ -97,10 +97,10 @@ export default function Timeline() {
                 />
               </div>
 
-              {/* Content card */}
+              {/* Content card - full width on mobile with left padding, alternating on md+ */}
               <div
-                className={`w-5/12 ${
-                  index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
+                className={`w-full pl-12 md:w-5/12 md:pl-0 ${
+                  index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 text-left"
                 }`}
               >
                 <motion.div
@@ -127,7 +127,7 @@ export default function Timeline() {
                   </p>
 
                   {item.metrics && (
-                    <div className={`flex flex-wrap gap-2 mt-3 ${index % 2 === 0 ? "justify-end" : "justify-start"}`}>
+                    <div className={`flex flex-wrap gap-2 mt-3 justify-start ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
                       {item.metrics.map((metric) => (
                         <span
                           key={metric}
