@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="py-12 bg-darker border-t border-gray/10">
       <div className="container mx-auto px-6">
-        <motion.div
+        <m.div
           className="flex flex-col md:flex-row items-center justify-between gap-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -58,7 +58,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Bottom bar */}
         <div className="mt-8 pt-8 border-t border-gray/10 flex flex-col md:flex-row items-center justify-between gap-4">

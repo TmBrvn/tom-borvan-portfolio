@@ -5,6 +5,7 @@ import "./globals.css";
 import { siteConfig } from "./config/site";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { MotionProvider } from "./components/MotionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,8 +83,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          {children}
-          <ThemeToggle />
+          <MotionProvider>
+            {children}
+            <ThemeToggle />
+          </MotionProvider>
         </ThemeProvider>
         <Analytics />
       </body>

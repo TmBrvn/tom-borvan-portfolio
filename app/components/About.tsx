@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 
 export default function About() {
   return (
     <section id="about" className="py-24 bg-dark">
       <div className="container mx-auto px-6">
-        <motion.div
+        <m.div
           className="grid md:grid-cols-2 gap-12 items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -15,7 +15,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           {/* Avatar/Visual */}
-          <motion.div
+          <m.div
             className="relative"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,26 +39,26 @@ export default function About() {
               </div>
 
               {/* Floating badges */}
-              <motion.div
+              <m.div
                 className="absolute -top-2 -right-2 bg-dark border border-primary/50 rounded-lg px-3 py-1"
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
                 <span className="text-sm text-primary font-mono">15+ years</span>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 className="absolute -bottom-2 -left-2 bg-dark border border-accent/50 rounded-lg px-3 py-1"
                 animate={{ y: [0, 5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <span className="text-sm text-accent font-mono">Magna Cum Laude</span>
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -100,8 +100,8 @@ export default function About() {
                 </span>
               ))}
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

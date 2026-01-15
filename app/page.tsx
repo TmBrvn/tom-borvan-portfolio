@@ -1,11 +1,15 @@
+import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Timeline from "./components/Timeline";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import { siteConfig } from "./config/site";
+
+// Dynamic imports for below-the-fold sections
+// These load on-demand, reducing initial bundle size
+const About = dynamic(() => import("./components/About"));
+const Timeline = dynamic(() => import("./components/Timeline"));
+const Skills = dynamic(() => import("./components/Skills"));
+const Projects = dynamic(() => import("./components/Projects"));
+const Contact = dynamic(() => import("./components/Contact"));
+const Footer = dynamic(() => import("./components/Footer"));
 
 const jsonLd = {
   "@context": "https://schema.org",

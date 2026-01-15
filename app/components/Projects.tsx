@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const projects = [
   {
@@ -72,7 +72,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-darker">
       <div className="container mx-auto px-6">
-        <motion.div
+        <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,9 +84,9 @@ export default function Projects() {
           <p className="text-gray-light text-lg max-w-2xl mx-auto">
             Selected projects showcasing leadership, technical delivery, and business impact.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="grid md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -94,7 +94,7 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           {projects.map((project) => (
-            <motion.div
+            <m.div
               key={project.title}
               variants={cardVariants}
               className={`group relative rounded-2xl overflow-hidden transition-all duration-500 ${
@@ -164,9 +164,9 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const timelineData = [
   {
@@ -56,7 +56,7 @@ export default function Timeline() {
   return (
     <section id="experience" className="py-24 bg-darker">
       <div className="container mx-auto px-6">
-        <motion.div
+        <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,14 +68,14 @@ export default function Timeline() {
           <p className="text-gray-light text-lg max-w-2xl mx-auto">
             15+ years of building, leading, and delivering across startups, enterprises, and continents.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="relative">
           {/* Center line - left on mobile, center on md+ */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-accent to-primary/20" />
 
           {timelineData.map((item, index) => (
-            <motion.div
+            <m.div
               key={`${item.year}-${item.title}`}
               className={`relative flex items-center mb-12 justify-start md:${
                 index % 2 === 0 ? "justify-start" : "justify-end"
@@ -104,7 +104,7 @@ export default function Timeline() {
                   index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8 text-left"
                 }`}
               >
-                <motion.div
+                <m.div
                   className={`p-6 rounded-xl border transition-all duration-300 hover:scale-[1.02] ${
                     item.highlight
                       ? "bg-dark/80 border-accent/30 hover:border-accent/60"
@@ -139,9 +139,9 @@ export default function Timeline() {
                       ))}
                     </div>
                   )}
-                </motion.div>
+                </m.div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const contactLinks = [
   {
@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-dark">
       <div className="container mx-auto px-6">
-        <motion.div
+        <m.div
           className="max-w-3xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function Contact() {
           {/* Contact cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {contactLinks.map((link, index) => (
-              <motion.a
+              <m.a
                 key={link.label}
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
@@ -75,12 +75,12 @@ export default function Contact() {
                 <p className="text-light font-medium group-hover:text-primary transition-colors">
                   {link.value}
                 </p>
-              </motion.a>
+              </m.a>
             ))}
           </div>
 
           {/* Location badge */}
-          <motion.div
+          <m.div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-darker border border-gray/20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -90,8 +90,8 @@ export default function Contact() {
             <span className="text-gray-light text-sm">
               📍 Oslo, Norway
             </span>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );
